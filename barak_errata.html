@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Errata for Computational Complexity</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+
+<header>
+<h1> Errata for Computational Complexity: A Modern Approach</h1>
+</header>
+
+<body>
+<p>
+Errata for Computational Complexity: A Modern Approach (by Sanjeev Arora and Boaz Barak). 
+
+<p>
+Mostly from Parts 2 and 3 of the book. 
+If you find something I haven't, email me at:
+first-name  . last-name @ gmail.com
+- Daniel Mitropolsky
+</p>
+
+<h2> Chapter 19 (Hardness amplication and error-correcting codes)</h2>
+<ul>
+	<li> pg. 399, Exercise 1 not true as written, should say ask to prove \( \mathbb{P}[X=1] = 1/2 + (-1)^{k+1}(1-2\delta)^k/2 \)
+</ul>
+
+<h2> Chapter 21 (Pseudorandom constructions: Expanders and extractors)</h2>
+<ul>
+	<li> pg. 430, in the proof of Claim 2 the 2nd inequality is missing a factor of \(d\) in the RHS sum, it should say \( \frac{2}{d}\sum_{k=1}^{n/2}d\rho k(\mathbf{v}_k^2 - \mathbf{v}_{k+1}^2) \)
+	<li> pg. 430, in the proof of Claim 2 the last line has a typo, it should say \(\frac{2}{d}d\rho \sum_{k=1}^{n/2}k\mathbf{v}_k^2 - (k-1)\mathbf{v}_k^2 = 2\rho\sum_{k=1}^{n}\mathbf{v}_k^2 = \cdots \)
+	<li> pg. 434, in the statement of Theorem 21.15 it should say \(|B| = \beta n\) not \(\beta N\)
+	<li> pg. 439, at the end of the proof of Claim, the run time is incorrectly given as \(n^{\log 100}\) (\(n\) is not even defined in this Claim). It should be \(100^{\log k}\) which is indeed \(\mathbf{poly}(k)\) as needed
+	<li> pg. 441, second paragraph of 21.4.1 should say that \(G_k = (G_{k-1}\circledR H)^{50}\) is a \(d^{50}N\)-vertex graph with degree \(d^{50}\), not \(d\) (though anyway both are constants).
+	<li> pg. 441, in the statement of Claim it should say \(G_k\) is a \(d^{50k}n,d^{50},1-\epsilon\) expander, not \(d^{20}\) (though anyway both are constants).
+	<li> pg. 445, in Lemma 21.26 it should say \(\Delta(H(X)\circ H, U_m\circ H) < \epsilon\), i.e. \(U_m\) not \(U_n\)
+	<li> pg. 448 (TODO) Need to confirm, but Theorem 21.28 is not just a constructive version of 20.7, since I think that proof only gives \(R^{D}(a,x)\) that would be correct on most \(x\), not all.
+	<li> pg. 451, in Definition 21.33 the piecewise definition of \(G_k(a\circ z)\) should say \(k=0\) on top and \(k \geq 1\) on the bottom
+</ul>
+
+</body>
+</html>
