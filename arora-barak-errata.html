@@ -25,6 +25,17 @@ first-name  . last-name @ gmail.com
 - Daniel Mitropolsky
 </p>
 
+<h2> Chapter 18 (Average case complexity: Levin's theory)</h2>
+<ul>
+	<li> pg. 368, the statement and proof of Lemma 18.9 are wrong. First, it is not possible that \(|g(x)| = |x|+2\) and that it have property (3). For instance the probability of some \(x\) is 1 then \(\mathbb{P}[g(x)=g(D_m)] \leq 2^{-|g(x)|+1}\) is clearly false. There are many other mistakes; the Lemma, and Proof of Theeoreme 18.8, can be fixed as follows:
+	<li> Remove condition 2.
+	<li> Condition 3 should be restated as: for any \(y \in g(\{0,1\}^n)\), \(\mathbb{P}[y=g(D_n)] \leq 2^{-|y|+1}\)
+	<li> In the first part of the proof, it is not true that the \(h\) given is 1-1. First, it is not injective on \(x\) with probability 0 (if \(x\) has prob. 0, then \(h(x) = h(x-1)\)). Furthermore, it is not injective on inputs of different length; there are many scenarios (even for non-zero probability inputs) where \(h(x) = h(x')\) for \(|x|\neq|x'|\). However, it is true that for any \(n\), \(h\) is injective on \(\{x \in \{0,1\}^n~:~\mathbb{P}_{D_n}(x)\neq 0 \} \). 
+	<li> Similar to above, \(g\) is injective only on same-length inputs (i.e. on \(\{0,1\}^n\) for any \(n\)).
+	<li> Remove the part about padding \(g\), indeed it is critical that \(g(x)\) be much shorter than \(x\) in some cases (when \(x\) has high prob. under \(D\)). Then the revised version of condition 3 is met.
+	<li> It is still an issue that \(g\) is not injective on \(\{0,1\}^*\) since the proof of Theorem 18.8 relies on this critically (otherwise, the reduction in that proof does not satisfy Correctness). There may be a few ways to fix this, but one is to modify the definition of \(g(x)\) or those \(x\) s.t. \(\mathbb{P}_{D_n}[x] > 2^{-n}\) to be \(|x| || h(x)\) (ignoring some trivial details about extra bits to represent separators, etc). Including the length of \(x\) clearly makes \(g\) injective on all of \(\{0,1\}^*\). Most importantly condition 3 can be modified to say for any \(y \in g(\{0,1\}^n)\), \(\mathbb{P}[y=g(D_n)] \leq n2^{-|y|}\). The proof of Theorem 18.8 still goes through even with this bound, because the probability of a tuple given by the reduction, \(\langle M',y,1^t \rangle \) of length \(m\), has probability at most \(n2^{-|y|}\). Since by construction (in proof of 18.8) we have \(m > t > n\), the probability is upper bounded by \( m2^{-|y|} \leq m^3 (2^{-\log m}2^{-|y|}\frac{1}{m}) \) (i.e. Domination holds).
+</ul>
+
 <h2> Chapter 19 (Hardness amplication and error-correcting codes)</h2>
 <ul>
 	<li> pg. 383, top line of page should say the distance might decrease from \(\delta\) to \(\delta/2\).
