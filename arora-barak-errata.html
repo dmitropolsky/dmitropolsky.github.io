@@ -38,7 +38,13 @@ first-name  . last-name @ gmail.com
 
 <h2> Chapter 19 (Hardness amplication and error-correcting codes)</h2>
 <ul>
+	<li> pg. 376, in statement of Lemma 19.3 it should say for every \(x\in\{0,1\}^n\) not \(x\in\{0,1\}^*\) 
+	<li> pg. 378 in second-to-last paragraph of proof, it should say define \(C(x)\) to equal the majority of \(C_1(x),\ldots,C_t(x)\).
 	<li> pg. 383, top line of page should say the distance might decrease from \(\delta\) to \(\delta/2\).
+	<li> pg. 383, Lemma 19.11: The Reed-Solomon code has distance \(1-\frac{n-1}{m}\). (Indeed for \(n=m\) the current statement gives a trivial distance of \(0\), but the code is invertible). Relatedly, in the proof it should say nonzero \(n-1\) degree polynomial has at most \(n-1\) roots (not \(n\)).
+	<li> pg. 383, last paragraph. The remark about obtaining the Walsh-Hadamard code as a special case of Reed-Muller codes is not true as stated. Setting \(d=1\) and \(\mathbb{F}=\mathbb{F}_2\) results in a code \(\mathbb{F}_2^{l+1}\rightarrow \mathbb{F}_2^{2^l}\); interpreting the domain as \(\{0,1\}^n\) (i.e. \(n=l+1\)) this gives a code mapping \(x \in \{0,1\}^n\) to a \(2^{n-1}\) long string \(z\) where for \(y\in\{0,1\}^{n-1}\) we have \(z_y = x_0 + x_{[1:n]}\odot y \mod{2}\). However, the suggested code can be obtained too by considering the function \(f_x(a) = P(a,x_1,\ldots,x_n)\) as a code of \(x\). 
+	<li> pg. 38, in Proof of Theorem 19.15, remove second sentence of "Randomized interpolation" (Assume that \(t\) is quite large...)
+	<li> pg. 385, in Proof of Theorem 19.15, Randomized interpolation, should say \((d+1)\frac{m-1}{m} \leq \frac{1}{2}\).
 	<li> pg. 399, Exercise 1 not true as written, should say ask to prove \( \mathbb{P}[X=1] = 1/2 + (-1)^{k+1}(1-2\delta)^k/2 \).
 </ul>
 
