@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Cryptography, Spring 2024</title>
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align: center;">COMS E6261: Advanced
+	Cryptography</h1>
+      <h1 style="text-align: center;">Spring 2024: Cryptography &#8745; TFNP</h1> 
+   </header>
+
+
+<div style="text-align: center;">
+<a href="#information">General Information</a> |
+<a href="#readings">Lectures  and Reading </a> |
+<a href="#requirements">Class Requirements</a> |
+<a href="projects.html">Projects</a> 
+  <br>
+</div>
+
+     <hr style="width: 100%; height: 2px;">
+
+	<h2 id="information">General Information</h2> 
+
+	<h3>Instructors:</h3>
+	<ul>
+	  <li> <a href="https://dmitropolsky.github.io/">Daniel Mitropolsky</a> (512 CSB, office hours by appointment), Email: mitropolsky at cs </li> 
+
+	  <li> <a href="http://www.cs.columbia.edu/~tal">Tal Malkin</a> (514 CSB, office hours by appointment), Email: tal at cs </li>
+	</ul> 
+
+	
+	<h3>Teaching Assistant:</h3>  
+	<ul>
+	  <li> TBA
+	  </li> 
+	</ul>
+
+	<b> <span style="font-size:1.17em"> Time &amp;
+	    Place:</span></b>: Thursdays 1:10-3:40pm, location TBA. 
+
+
+    <p><b>Administrative Notes:</b> <br>
+      This course can be used as a theory elective for the PhD program
+      in computer science, as a track elective for MS students in the
+      "Foundations of Computer Science" track or the "Computer
+      Security" track, as a foundations track elective for
+      undergraduates following the old curriculum, or an elective for
+      undergrads following the new curriculum. 
+
+        
+      COMS E-6261 Advanced Cryptography focuses around a different
+      topic, possibly with a different format, every time it is taught.
+      The class can be repeated for credit.
+      Auditing the class is certainly possible but requires instructor
+      approval.
+      
+
+    
+</p><p><h2>Prerequisites</h2>
+ COMS-W4261 Introduction to Cryptography  or 
+  COMS-W4236 Introduction to Computational Complexity or instructor
+    approval.   The most important prerequisite is mathematical
+  maturity, and comfort with (preferably also strong affection for)
+  rigorous definitions and proofs.  
+</p>
+
+
+<p> <h2>Motivation and Course Description</h2>
+     
+Many cryptographic primitives trivially imply that NP is hard in the
+  average case, but we do not know how to show that even the weakest
+  of these (one-way functions) exist given the assumption that NP is
+  hard on average. A step towards resolving this fundamental problem
+  is to show that cryptography implies hardness of problems weaker
+  than NP. An important source of such problems is TFNP, the class of
+  search problems that are total, namely every input is guaranteed to
+  have a solution, and where a solution can be efficiently verified.
+  Examples include factoring an integer, finding a Nash equilibrium,
+  or finding a collision for a circuit that has fewer outputs than
+  inputs. TFNP is believed to be NP-intermediate, i.e. not in P, but
+  not NP-hard.
+  <p>
+  In this course we will survey the new and burgeoning
+  field of cryptography &#8745; TFNP, exploring the connections between
+  cryptography and the complexity of total search problem. We will
+  also consider connections to meta-complexity. There will be an
+  emphasis on open problems and research techniques.
+
+  <p> 
+
+    This course is an advanced graduate level seminar, where most
+    lectures will be given by students taking the class (with prior
+    feedback and support from the instructors and fellow students).
+    The specific papers covered will be selected by the instructors,
+    biased by their interests, and (especially for the later lectures)
+    also by the interests of the students taking the class.
+    More detail on specific papers and materials for each lecture will
+    be regularly updated here.
+
+    
+    <h2 id="reeadings">Lectures and Readings</h2>
+    Details on specific papers and topics to be covered in each
+    lecture  will be regularly updated here.
+    <!--also related supplementary readings, further resources, and
+    related open problems
+    -->
+    We will also post materials  (slides or notes as necessary)
+    associated with each lecture.
+    
+    <h2 id="requirements">Class Requirements</h2>
+    The class requirements and  their relative weight in the
+    grade,  are as follows: 
+    <ul>
+      <li> <b> Lecture Presentation and Support (40%): </b> 
+	Each weekly meeting will be divided into two lectures of about 50
+	minutes each, and most lectures will be delivered by
+	students. There will be 1 or 2 students in charge of the
+	lecture (presenting the assigned papers to the class), and 1
+	or 2 students  supporting the presenter(s).
+	The team of presenter(s) and supporter(s) should work together to
+	thoroughly understand the assigned paper, and plan how to
+	teach it effectively. Motivation and context, as well as
+	definitions, proofs, techniques, and open problems, are all
+	important -- the team, with  guidance and feedback from the
+	teaching staff, should plan the right balance in teaching
+	their particular topic to the class. 
+	The team should also provide materials for 
+	rest of the class, in the form of notes or slides 
+	summarizing the lecture (again with feedback from the teaching
+	staff).
+	Every student is expected to take the role of a presenter
+	twice and the role of a supporter twice throughout the
+	semester. 
+	</li> 
+
+      <li> <b> Quizzes (10%): </b>
+	Every week, there will be a short, auto-graded quiz on
+	gradescope.   This is meant to be a simple, easy quiz, to check
+	that students have been paying attention and understood the
+	main take-home messages of the lectures. The quiz should be
+	taken individually by every student, without collaboration. 
+      </li>
+      
+      <li> <b> Attendance, Participation, Homework (10%): </b> 
+	Students are expected to be present in lectures (physically,
+	but not only), and are encouraged to particpate. 
+	There may also be a small number (between 0 and 2, likely
+	closer to 0) of  homeworks. </li> 
+
+    </li><li><b id="projects"> Project (40%): </b> 
+       Every student should complete a research project on any cryptographic
+ topic of their choice (subject to instructor approval).   
+  Students may work on their research project individually or in a
+  group. 
+  If you would like to collaborate with others outside the
+  class, e.g., other professors or fellow students, you may do so,
+  provided that all your collaborators know and approve, and that 
+  you're not getting double credit for the same project (and of
+  course,  we will hold you accountable for your project).   
+  <br>
+  More information about the requirements, deadlines, and suggested
+  topics for the projects is available on the
+  <a href="projects.html">projects page</a>.
+<!--  Each project will be presented to the class, either during the final
+  exam slot for the class, or during a scheduled day on reading week.-->
+</li>
+</ul>
+Overall, we plan to grade generously, but what you get from the class
+in terms of the class goals -- learning and exposure to the topics
+covered, research, and teaching --  is proportional to how much you put
+into it (and for the learning part, also proportional to how much your
+fellow students and teaching staff put into the teaching part). We hope
+for an intimate, fun class, where everyone puts forth their best effort.  
+</p>
+
+
+
+
+<h2> Academic Honesty </h2>
+
+
+We expect that the primary goal of everyone in the class is to learn (we
+can imagine no other reason that you would be in this class).
+Hopefully this means that there will be no focus on grades 
+(which we can tolerate but discourage in this class), and no issues of
+dishonesty (which we absolutely will not tolerate). In particular,
+students should take the  quizzes on their own, and be sure to
+provide appropriate citations for all sources used in their project
+reports,  as well as acknowledgements to other people who
+contributed (just as you should do in any academic publishing). 
+
+<p>
+As in every CS class, students are expected to adhere to
+the <a href="http://www.cs.columbia.edu/education/honesty"> academic
+  honesty policy</a>  of the CS department. This policy has been
+passed by the faculty of the Department and approved by the school deans.
+
+
+</p></body></html>
