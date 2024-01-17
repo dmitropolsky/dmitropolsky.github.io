@@ -100,14 +100,74 @@ Many cryptographic primitives trivially imply that NP is hard in the
 
     
     <h2 id="readings">Lectures and Readings</h2>
-    Details on specific papers and topics to be covered in each
-    lecture  will be regularly updated here.
-    <!--also related supplementary readings, further resources, and
-    related open problems
-    -->
-    We will also post materials  (slides or notes as necessary)
-    associated with each lecture.
+    Below are the topics and associated papers planned for the first several weeks. This section will continue to be regularly updated.
+    We will also post materials (slides or notes as necessary) associated with each lecture after it takes place.
     
+    <h4> Topic 1: Number Theory and TFNP </h4>
+    <p>The hardness of factoring of finding discrete logarithms in cyclic groups are used to construct public-key cryptographic primitives. What do we know about the complexity of these problems in TFNP?</p>
+
+    <p>Papers:
+    <ul>
+    <li> <a href="http://www.cs.toronto.edu/~bureshop/factor.pdf">On the TFNP complexity of factoring</a>, Buresh-Oppenheim
+    <li>
+    <a href="https://arxiv.org/pdf/1207.5220.pdf"> Integer factoring and modular square roots</a>, Jerabek </li>
+    <li> <a href=https://arxiv.org/pdf/2107.02617.pdf> On Search Complexity of Discrete Logarithm</a>, Hubacek and Vaclavek,
+     </li>
+   </ul>
+    </p>
+
+    <h4> Topic 2: Going NP Hardness-on-average to TNFP hardness </h4>
+    <p> Assuming that NP is hard-on-average, what can we say about the hardness of TFNP? What if we assume one-way functions do not exist, that is, is TFNP hard in Pessiland? </p>
+    <p> Papers: 
+    <ul>
+    <li> <a href="https://eccc.weizmann.ac.il/report/2016/199/"> The journey from NP to TFNP hardness</a>, Hubacek, Yogev, and Naor  </li>
+
+    <li> <a href="https://arxiv.org/pdf/1906.10837.pdf"> Is it Easier to Prove Theorems that are Guaranteed to be True?</a>, Rafael Pass and Muthuramakrishnan Venkitasubramaniam </li>
+    </ul>
+    </p>
+
+    <h4> Topic 3: PPAD hardness from Indistinguishability Obfuscation </h4>
+    <p> One of the most important and earliest results in TFNP Cryptography was the construction of hard a PPAD distribution from iO. </p>
+    <p> Papers:
+    <ul>
+    <li> <a href="https://eprint.iacr.org/2014/1029">On the Cryptographic Hardness of Finding a Nash Equilibrium</a>, Bitansky, Paneth, Rosen  </li>
+    <li> <a href="https://eprint.iacr.org/2015/1078">Revisiting the Cryptographic Hardness of Finding a Nash Equilibrium</a>, Garg, Pandey, Srinivasan </li>
+    </ul>
+    </p>
+
+    <h4> Topic 4: Beating iO: PPAD (and CLS) hardness from other assumptions </h4>
+    <p> Papers:
+    <ul>
+    <li> <a href="https://eprint.iacr.org/2019/549.pdf">Finding a Nash Equilibrium Is No Easier Than Breaking Fiat-Shamir</a>, Choudhuri, Hubace, Kamath, Pietrzak, Rosen, and Rothblum </li>
+    <li> <a href="https://eprint.iacr.org/2020/980.pdf">SNARGs for Bounded Depth Computations and PPAD Hardness from Sub-Exponential LWE</a>, Jawale, Kalai, Khuruna, and Zhang </li>
+    <li> <a href="https://eprint.iacr.org/2022/1272">PPAD is as Hard as LWE and Iterated Squaring</a>, Bitansky, Choudhuri, Holmgrem, Kamath, Lombardi, Paneth, Rothblum </li>
+    </ul>
+    </p>
+
+    <h4> Topic 5: From OWFs to TNFP hardness </h4>
+    <p>
+    iO, and even the other assumptions that have been used to construct hard TNFP instances, are quite strong. Can we hope to show TFNP hardness from the most basic cryptographic primitive: one-way functions?
+    </p>
+    <p>
+    Papers: 
+    <ul>
+    <li><a href="https://eprint.iacr.org/2023/945.pdf">One-Way Functions vs. TFNP: Simpler and Improved</a>, Folwarczny, Goos, Hubacek, Maystre, Yuan </li>
+
+    <li><a href="https://eprint.iacr.org/2016/375.pdf">Can PPAD Hardness be based on standard cryptographic assumptions?</a>, Rosen, Segev Shahaf </li>
+  </ul>
+  </p>
+
+    <h4> Other papers to cover later (schedule TBD): </h4>
+    <ul>
+    <li><a href="https://eccc.weizmann.ac.il/report/2017/015">White-Box vs. Black-Box Complexity of Search Problems: Ramsey and Graph Property Testing</a>, Komargodski, Naor, and Yogev </li>
+    <li><a href="https://arxiv.org/abs/1808.06407">PPP-Completeness with Connections to Cryptography</a>, Sotiraki, Zampetakis, Zirdelis  </li>
+    <li><a href="https://eccc.weizmann.ac.il/report/2023/038/">Indistinguishability Obfuscation, Range Avoidance, and Bounded Arithmetic</a>, Rahul Ilango, Jiatu Li, Ryan Williams </li>
+    <li><a href="https://eprint.iacr.org/2015/126">Perfect Structure on the Edge of Chaos</a>, Nir Bitansky, Omer Paneth, and Daniel Wichs </li>
+  </ul>
+
+  <p> Other topics will be chosen based on instructor and student interests. Potential topics include: cryptography and meta complexity, limits on basing cryptography on NP hardness, cryptography from learning theory, and more. 
+  </p>
+
     <h2 id="requirements">Class Requirements</h2>
     The class requirements and  their relative weight in the
     grade are as follows: 
