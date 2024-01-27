@@ -101,7 +101,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
     
     <h2 id="readings">Lectures and Readings</h2>
 
-    <ul> <li><b> Lecture 1: </b> Introduction and class overview.  Tal
+    <ul> <li><b> Lecture 1 (1/18): </b> Introduction and class overview.  Tal
     gave a quick intro to crytography, including an overview of
     Impagliazzo worlds and definitions of OWF, OWP, CRHF, and IO.  Dan
     gave a quick intro to total function complexity, including
@@ -115,14 +115,32 @@ Many cryptographic primitives trivially imply that NP is hard in the
     problems and associated classes in TFNP (PPA, PPAD, PLS, and even
 	PPP) -- as we will see next time.
 	<ul> 
-	  <li> Reading: Here are the <a href="lecture-notes/L1-2024-1-19-Malkin-Mitropolsky.pdf" target="_blank">lecture notes from class</a>.  For some
+	  <li> Reading: Here are the <a href="lecture-notes/L1-2024-1-18-Malkin-Mitropolsky.pdf" target="_blank">lecture notes from class</a>.  For some
 	    general background on crytpography, you can see the general
 	    resources
 	    recommended <a href="https://www.cs.columbia.edu/~tal/4261/F23/readings.html" target="_blank">here</a>
 	    (in particular, shelat-Pass and Goldreich). </li> 
-	  <li> <a href="quizzes/Quiz1_Solutions.pdf" target="_blank">Quiz 1 solutions</a> (also available on gradescope).  </li>
+	  <li> <a href="quizzes/Quiz1_Solutions_corrected.pdf" target="_blank">Quiz 1 solutions (corrected a previous error!)</a> (also available on gradescope).  </li>
 	</ul>
     </ul>
+
+    <ul> <li><b> Lecture 2 (1/18): </b>
+	<ul> <li>Part 1: Dan continued from last time.  Showed a proof that PWPP-p(n) (finding collisions for circuits that shrink a longer poly(n) input string to a shorter n bit string) is equivalent to PWPP (finding a collision for circuits with input length = output length+1) - this generalizes a statement we saw last time.
+	    Continued discussing how to make a TFNP problem out of the graph-theoretic existence theorem (an undirected acyclic graph with a vertex of degree 1, has another vertex of degree 1).  We discussed several attempts and variations/special cases, giving rise to different TFNP subclasses. Specifically,  PPA via "END-OF-UNDIRECTED-LINE", a variation that is equivalent to PIGEON (thus gives PPP), PPAD via END-OF-LINE problem, PLS via ITER problem.  We said that PPAD is a subset of PPA intersect PPP. We defined two more problems that turn out to be complete to PPA (in addition to the END-OF-UNDIRECTED-LINE): ODD-DEGREE and LONELY (aka PAIRING).
+	    <ul> <li> Reading:  Here are the <a href="lecture-notes/L2-2024-1-25-Malkin-Mitropolsky.pdf" target="_blank">lecture notes from class</a>.
+	    </li> </ul>
+	  </li>
+	  <li> Part 2: <b> Yuriko Nishijima</b>, with support from Akash Kumar, presented on where factoring fits within TFNP.  She prepared a presentation on the main points from the following two papers:
+	    <ul>  <li> <a href="http://www.cs.toronto.edu/~bureshop/factor.pdf">On the TFNP complexity of factoring</a>, Buresh-Oppenheim </li>
+	      <li>
+		<a href="https://arxiv.org/pdf/1207.5220.pdf"> Integer factoring and modular square roots</a>, Jerabek </li>
+	    </ul>
+	    However, given time constraints, she only ended up covering the first paper showing that factoring specific types of integers is in PPA, and (for more general integers) in PPP with randomized reductions. She also gave a more general overview of what is known.  We will discuss some of the more general results from the second paper next time.
+	    <ul> <li> Reading:  Here are the <a href="lecture-notes/L2b-2024-1-25-Nishijima-Kumar.pdf" target="_blank">Yuriko's notes</a>.
+	    </li> </ul>
+	  </li>
+	  <li> Quiz 2 is out on gradescope! </li> 
+	</ul>
 
     Below are the topics and associated papers planned for the first several weeks. This section will continue to be regularly updated.
     We will also post materials (slides or notes as necessary) associated with each lecture after it takes place.
