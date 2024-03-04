@@ -229,7 +229,49 @@ Many cryptographic primitives trivially imply that NP is hard in the
       <li> <b> Lecture 7 (2/29):</b>
 	<ul>
 	  <li> Part 1:  
-	    We will start discussing results on hardness of PPAD from cryptography -- Dan will give an overview and some definitions and preliminaries.</li> 
+	    We started our next unit -- hardness of PPAD (and related classes) from cryptography.
+	    Dan gave several definitions and preliminaries.  He
+	    defined PPAD and PPADS (via END-OF-LINE problem, where in
+	    PPADS a sink must be given, while in PPAD either a sink or
+	    another source), as well as PLS (via the SINK-OF-DAG problem,
+	    which is equivalent to ITER that we saw in Lecture 1). He
+	    then defined SVL -- Sink-Of-Verified-Line -- a promise
+	    problem (not total) which is reducible to
+	    PPAD &#8745; PLS (so, if there's a way to generate
+	    yes-instances of SVL that are hard to solve, then both
+	    PPAD and PLS are also hard on average).  Dan showed this
+	    reduction -- how to transform a yes-instance of SVL to an
+	    instance of PPAD (or of PLS) in a way that a solution to
+	    the PPAD (PLS) instance will give a solution to the SVL
+	    instance. Intuitively, the main problem is that in SVL the
+	    given instance includes only a way to go forward one step, and a way to verify a given
+	    node (n-bit-string) is t steps away, but it's not clear how to go
+	    backwards; in contrast, for END-OF-LINE instance we
+	    need both a successor and predecessor circuits.  
+	    The main technique in the reduction used a pebbling game, where
+	    each step is reversible, and where we can show that with t
+	    pebbles we can reach a point in location 2<sup>t+1</sup>.
+	    This allows to use the SVL instance to an END-OF-LINE
+	    instance, where the each node in the new graph consists of all
+	    the pebbles locations (together with the n-bit-string that
+	    can be used to verify this).  The  fact that each step in the pebbling
+	    game is reversible allows to create both a successor and a
+	    predecessor circuit (as well as to create the "cost"
+	    circuit, which is which stage we are in in the pebbling
+	    game, if we want a PLS circuit).
+	    
+	    We noted that this reduction produces an instance with a
+	    <i>unique</i> solution (namely, SVL reduces to UEOPL),
+	    which is much more structured (harder/lower/contained in)
+	    PPAD  &#8745; PLS. 
+
+	    In the next few lectures we will see how various
+	    crytpographic assumptions imply that we can generate hard
+	    promise-true intances of SVL (which in turn imply
+	    hardness-on-average of UEOPL and  thus also of PPAD and PLS). 
+	    <ul> Dan's notes. 
+	    </ul>
+	  </li> 
 	  <li> Part 2: We will discuss the projects -- note that the
 	  proposal is due next Tuesday! (see more details on the
 	  <a href="projects/" targt="_blank">project page</a>).
