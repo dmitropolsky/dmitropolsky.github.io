@@ -345,24 +345,140 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	</ul>
       </li>
       <li> <b> Lecture 10 (3/28):</b>
-      <li> <b> Tianqi Yang</b> (with support from Yizhi Huang) first gave a
-      high level overview of the known results on instantiating the approach
-      described last time to get rSVL hardness using incrementally verfiable unambiguous
-      SNARGs for a hard language. He then discussed the technique at
-      the heart of this line of work (although many additional details
-      on top of this technique were omitted):  instantiating the
-      Fiat-Shamir paradigm via collision intractable hash
-	functions. He also showed the circular-FHE based instantiation.
 	<ul>
-	  <li> Here are <a href="lecture-notes/L10-2024-3-28-Yang-Huang.pdf"
-			       target="_blank">Tianqi's notes.</a> </li></li>
+	  <li> <b> Tianqi Yang</b> (with support from Yizhi Huang) first gave a
+	    high level overview of the known results on instantiating the approach
+	    described last time to get rSVL hardness using incrementally verfiable unambiguous
+	    SNARGs for a hard language. He then discussed the technique at
+	    the heart of this line of work (although many additional details
+	    on top of this technique were omitted):  instantiating the
+	    Fiat-Shamir paradigm via collision intractable hash
+	    functions. He also showed the circular-FHE based instantiation.
+	    <ul>
+	      <li> Here are <a href="lecture-notes/L10-2024-3-28-Yang-Huang.pdf"
+			       target="_blank">Tianqi's notes.</a> </li>
+	    </ul>
+	  </li>
+	  <li> Quiz 10 is available on the gradescope</li> 
+	</ul>
+      <li> <b> Lecture 11 plan:</b>
+	<ul><li>  (presenter: Shouqiao, supporter: Yuriko). 
+	    Unconditional hardness of PLS in the ROM: the second half
+	    of the <a href="https://eprint.iacr.org/2020/013"
+	    target="_blank">Bitansky-Gerichter paper on complexity of
+	    local search</a>.  This paper uses a technique from blockchain --
+	    incremental proofs of work -- to prove hardness of PLS in
+	    the random oracle model!  It's also one of the only papers
+	    showing hardness of something easier than than rSVL, which
+	    is something we're always interested in doing, as it gives
+	    the hope of starting with easier crypto assumptions!    
+ 
+	    The paper is related to the teqhnique we saw last week
+	    (Lecture 9) and the associated quiz, making an observation
+	    about how a relaxation of it - incrementally verifiable
+	    computation without uniqueness - is sufficient for PLS
+	    hardness.
+	    We want to present only the second half of the paper, not
+	    the instantiations in the plain model from computational
+	    assumptions, but yes the unconditional instantiation in
+	    the ROM -- this is the part taken from blockchain
+	    techniques.  
+ 	  </li> 
+	  <li> (presenter: Hugo, supporter: Kashvi). 
+	    <a href="https://eprint.iacr.org/2015/126"
+	  target="_blank">Bitansky-Paneth-Wichs Perfect structure on
+	  the edge of chaos</a>-- a beautiful title, and this paper is
+	  a great example of how progress in one area can
+	  significantly help in another. Using techniques from the
+	  BPR'15, they solved a big problem purely in cryptography:
+	  they showed that iO and OWF implies trapdoor permutations
+	  (and thus OWP). 
+	  </li>
 	</ul>
       </li>
-      <li> Quiz 10 is available on the gradescope</li> 
+      <li> <b> Lecture 12 plan (tentative!):</b>
+	<ul><li> (presenter: Yizhi, supporter: ??)
+	    <a href="https://eprint.iacr.org/2016/375"
+	       target="_blank">Rosen-Segev-Shahaf's Can PPAD Hardness
+	       be Based on Standard Cryptographic Assumptions?</a>
+	       This is an important paper giving us partial answers on
+	       the big questions we've been thinking about in this
+	       class:  (1) can we base rSVL hardness on OWF? and (2)
+	       what about basing OWF on rSVL hardness? (this is one of
+	       the only papers that talks about the crypto from TFNP
+	       hardness direction! and even about crypto from
+	       TFNP+weaker crypto direction!  all these are problems
+	       discussed in class and in the open problems document we
+	       shared. 
+	    The paper shows that for (1), if the answer were yes, we
+	       would have exponentially many solutions (in contrast to
+	       techniques we have seen so far / know how to show
+	       hardness, which gives a unique solution).  For (2) it
+	       shows the answer is no (black-box separation). And a
+	    couple other results. 
+	    This is a long paper, but we will only focus on part of it (will figure out which part). 
+	  </li>
+	  <li> (presenter: Mark, supporter: ??) 
+	    Going back to the bigger picture and some things that were
+	    mentioned in passing in class, including clarifying the
+	    historical context and importance of some of the relevant
+	    classes that the literature focuses on, in particular PPAD
+	    and CLS.   We had focused on the technical definitions of
+	    these classes via graph problems such as SVL,
+	    END-OF-LINE, etc, but what is the significance of these
+	    classes?  This will not be very technical or a specific
+	    paper, but rather a historical and contexual perspective,
+	    with some motivation (it will also be a shorter segment). 
+	  </li>
+	</ul>
+      </li>
+      <li> <b> Lecture 13 plan (tentative!):</b>
+	<ul><li>
+	    <a href="https://eccc.weizmann.ac.il/report/2017/015/"
+	    target="_blank">Komargodski-Naor-Yogev's 
+	    White-box vs Black-box Complexity of Search Problems:
+	      Ramsey and Graph Property Testing</a>. 
+	    This paper considers a very beautiful total search problem
+	    that doesn't fit neatly into the classes we studied so
+	    far: the Ramsey problems, which is to find a clique or
+	    independent set  of a certain size in a graph; it turns
+	    out hardness of this problem follows from CRHFs!  
+	  </li>
+	  <li>
+	    <a href="https://eprint.iacr.org/2018/778"
+	    target="_blank">Sotiraki-Zampetakis-Zirdelis'
+	    PPP-completeness with connections to cryptography</a>. 
+This paper tries to answer a question that has been on many of our
+	    minds: what about TFNP hardness from LWE? While they don't
+	    answer this question exactly, they show how hardness of a
+	    related lattice problem (c-SIS) is equivalent to PPP
+	    hardness! At the heart of this is a very elegant reduction
+	    from circuit computation to a matrix equation. 
+	  </li>
+	</ul>
+      </li>
+      <li> <b> Lecture 14 plan (tentative!):</b>
+	<ul><li>
+	    Something about range avoidance (which is higher in the
+	    total hierarchy than TFNP), most likely 
+	    <a href="https://eccc.weizmann.ac.il/report/2023/038/"
+	       target="_blank">Ilango,Li,Williams iO, Range Avoidance,
+	       and Bounded Arithmetic</a>.  
+	    Introduced by Dan and co-authors in a recent paper, turns out there
+	       are interesting total search problems that cannot be NP
+	       verified, but live in the total polynomial hierarchy. A
+	       particularly important one is range avoidance, based
+	       off the empty pigeonhole principle (a mapping with more
+	       outputs than inputs has an empty pigeonhole). This
+	       paper is one of the first to show hardness of this
+	       problem from cryptographic assumptions! 
+	  </li>
+	</ul>
       </li>
     </ul>
   <p>
-    
+
+
     Other upcoming topics are listed below (this section continues to be updated, and note that we won't necessarily cover papers in this order in class).   
     We will also post materials (slides or notes as necessary) associated with each lecture after it takes place.
 
