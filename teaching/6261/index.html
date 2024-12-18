@@ -101,7 +101,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
     
     <h2 id="readings">Lectures and Readings</h2>
 
-    <ul> <li><b> Lecture 1 (1/18): </b> Introduction and class overview.  Tal
+    <ul> <li id="L1"><b> Lecture 1 (1/18): </b> Introduction and class overview.  Tal
     gave a quick intro to crytography, including an overview of
     Impagliazzo worlds and definitions of OWF, OWP, CRHF, and IO.  Dan
     gave a quick intro to total function complexity, including
@@ -122,7 +122,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	    (in particular, shelat-Pass and Goldreich). </li> 
 	  <li> <a href="quizzes/Quiz1_Solutions_corrected.pdf" target="_blank">Quiz 1 solutions (corrected a previous error!)</a> (also available on gradescope).  </li>
 	</ul>
-      <li><b> Lecture 2 (1/25): </b>
+      <li id="L2"><b> Lecture 2 (1/25): </b>
 	<ul> <li>Part 1: Dan continued from last time.  Showed a proof that PWPP-p(n) (finding collisions for circuits that shrink a longer poly(n) input string to a shorter n bit string) is equivalent to PWPP (finding a collision for circuits with input length = output length+1) - this generalizes a statement we saw last time.
 	    Continued discussing how to make a TFNP problem out of the graph-theoretic existence theorem (an undirected acyclic graph with a vertex of degree 1, has another vertex of degree 1).  We discussed several attempts and variations/special cases, giving rise to different TFNP subclasses. Specifically,  PPA via "END-OF-UNDIRECTED-LINE", a variation that is equivalent to PIGEON (thus gives PPP), PPAD via END-OF-LINE problem, PLS via ITER problem.  We said that PPAD is a subset of PPA intersect PPP. We defined two more problems that turn out to be complete to PPA (in addition to the END-OF-UNDIRECTED-LINE): ODD-DEGREE and LONELY (aka PAIRING).
 	    <ul> <li> Reading:  Here are the <a href="lecture-notes/L2-2024-1-25-Malkin-Mitropolsky.pdf" target="_blank">lecture notes from class</a>.
@@ -139,7 +139,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	  </li>
 	  <li> <a href="quizzes/Quiz2_Solutions.pdf" target="_blank">Quiz 2 solutions</a> </li> 
 	</ul>
-      <li><b> Lecture 3 (2/1): </b>
+      <li id="L3"><b> Lecture 3 (2/1): </b>
 	<ul> <li> Part 1:  <b> Akash Kumar</b>, with support from
 	    Yuriko Nishijima, presented the result from Jerabek's
 	    paper, showing that (general) factoring can be randomly
@@ -165,7 +165,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	</ul>
 	
     </li>
-    <li><b> Lecture 4 (2/8): </b>
+    <li id="L4"><b> Lecture 4 (2/8): </b>
       <ul> <li> Part 1: <b>Shouqiao Wang</b>, with support from Hugo Bucquet, presented a
 	  result placing discrete log in TFNP. In particular, 
 	  DLOG<sub>p</sub> for a prime p is in (but not likely to be
@@ -202,7 +202,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	</li>	
 	<li> <a href="quizzes/Quiz4_Solutions.pdf" target="_blank">Quiz 4 solutions</a> </li> 
       </ul>
-    <li> <b> Lecture 5 (2/15):</b> 
+    <li id="L5"> <b> Lecture 5 (2/15):</b> 
       <ul>
 	<li> <b>Yizhi Huang</b>, with support from Jiaqian Li, covered
 	  the following paper: 
@@ -215,18 +215,18 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	<li> <a href="quizzes/Quiz5_Solutions.pdf" target="_blank">Quiz 5 solutions</a> </li> 
       </ul>
     </li>
-      <li> <b> Lecture 6 (2/22):</b> 
+      <li id="L6"><b> Lecture 6 (2/22):</b> 
 	<ul>
 	  <li> <b>Kashvi Gupta</b>, with support from Tianqi Yang, covered
 	    the following paper: 
 	    <ul> <li><a href="https://eprint.iacr.org/2023/945.pdf" target="_blank">One-Way Functions vs. TFNP: Simpler and Improved</a>, Folwarczny, Goos, Hubacek, Maystre, Yuan </li> 
-	      <li> Here are <a href="https://docs.google.com/presentation/d/1qvCB1UMATFWTv8qugUf-TpG0HDTHjxUZd3tU2Fk_t3Y/edit#slide=id.g2bae4c91a4a_0_342" target="_blank">Kasvhi's slides</a>. </li> 
+	      <li> Here are <a href="lecture-notes/L6-2024-2-22-Gupta-Yang.pdf" target="_blank">Kasvhi's slides</a>. </li> 
 	    </ul>
 	  </li>
 	  <li> <a href="quizzes/Quiz6_Solutions.pdf" target="_blank">Quiz 6 solutions</a> </li>
 	</ul>
       </li>
-      <li> <b> Lecture 7 (2/29):</b>
+      <li id="L7"> <b> Lecture 7 (2/29):</b>
 	<ul>
 	  <li> Part 1:  
 	    We started our next unit -- hardness of PPAD (and related classes) from cryptography.
@@ -292,7 +292,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	  </li> 
 	</ul>
       </li>
-      <li> <b> Lecture 8 (3/7):</b>
+      <li id="L8"> <b> Lecture 8 (3/7):</b>
 	<ul>
 	  <li> Part 1: <b> Mark Chen</b> (with support from Yizhi Huang) 
 	  covered the BPR paper (see below), showing how to use 
@@ -330,7 +330,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	  </li>
 	</ul>
       </li>
-      <li> <b> Lecture 9 (3/21):</b>
+      <li id="L9"> <b> Lecture 9 (3/21):</b>
 	<ul>
 	  <li> <b>Jiaqian Li</b>, with support from Kashvi Gupta, covered the following paper:
 	    <ul>
@@ -344,7 +344,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	  <li>  <a href="quizzes/Quiz9_Solutions.pdf" target="_blank">Quiz 9 solutions</a></li> 
 	</ul>
       </li>
-      <li> <b> Lecture 10 (3/28):</b>
+      <li id="L10"> <b> Lecture 10 (3/28):</b>
 	<ul>
 	  <li> <b> Tianqi Yang</b> (with support from Yizhi Huang) first gave a
 	    high level overview of the known results on instantiating the approach
@@ -361,7 +361,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	  </li>
 	  <li>  <a href="quizzes/Quiz10_Solutions.pdf" target="_blank">Quiz 10 solutions</a></li> 
 	</ul>
-      <li> <b> Lecture 11 plan:</b>
+      <li id="L11"> <b> Lecture 11 plan:</b>
 	<ul><li>  Part 1: <b> Shouqiao Wang</b> (with support from Yuriko Nishijima) covered
 	    Unconditional hardness of PLS in the ROM: the second half
 	    of the <a href="https://eprint.iacr.org/2020/013"
@@ -399,7 +399,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
  		<li>  <a href="quizzes/Quiz11_Solutions.pdf" target="_blank">Quiz 11 solutions</a></li> 
 	</ul>
       </li>
-      <li> <b> Lecture 12 plan:</b>
+      <li id="L12"> <b> Lecture 12 plan:</b>
 	<ul><li> (presenter: Yizhi, supporter: Ashvin)
 	    <a href="https://eprint.iacr.org/2016/375"
 	       target="_blank">Rosen-Segev-Shahaf's Can PPAD Hardness
@@ -436,7 +436,7 @@ Many cryptographic primitives trivially imply that NP is hard in the
 	  <li> No quiz this week; more time to work on projects.</li> 
 	</ul>
       </li>
-      <li> <b> Lecture 13 plan (tentative!):</b>
+      <li id="L13"> <b> Lecture 13 plan (tentative!):</b>
 	<ul><li>
 	    <a href="https://eccc.weizmann.ac.il/report/2017/015/"
 	    target="_blank">Komargodski-Naor-Yogev's 
