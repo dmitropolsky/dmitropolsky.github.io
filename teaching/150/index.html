@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS 150-01: Natural Language Processing</title>
+  <!-- All styling is here. No external files, frameworks, or JavaScript. -->
+  <style>
+* { box-sizing: border-box; }
+body { margin: 0; color: #202020; background: white; font-size: 16px; line-height: 1.5; }
+a { color: #154f90; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid #154f90; outline-offset: 4px; }
+h1 { font-size: 2rem; line-height: 1.2; }
+h2 { font-size: 1.35rem; }
+nav { margin: 1.25rem 0; }
+nav a { display: inline-block; margin-right: 1.25rem; }
+.details p { margin: .25rem 0; }
+section { margin-top: 2rem; scroll-margin-top: 1rem; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 540px; }
+caption { text-align: left; margin-bottom: .7rem; }
+th, td { padding: .6rem .75rem; text-align: left; vertical-align: top; }
+thead th { font-weight: bold; }
+tbody th { font-weight: normal; white-space: nowrap; }
+.date-col { width: 19%; }
+.topic-col { width: 29%; }
+.ref-col { width: 26%; }
+.other-col { width: 26%; }
+@media (max-width: 600px) { h1 { font-size: 1.65rem; } th, td { padding: .5rem; } }
+@media print { body { font-size: 11pt; } .table-wrap { overflow: visible; } table { min-width: 0; } tr { break-inside: avoid; } }
+body { font-family: Georgia, "Times New Roman", serif; padding: 1.5rem 2rem; }
+.page { max-width: 1120px; margin: auto; }
+header { border-bottom: 1px solid #777; padding-bottom: 1rem; }
+th, td { border: 1px solid #999; }
+thead { background: #eee; }
+@media (max-width: 600px) { body { padding: 1rem; } }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>CS 150-01: Natural Language Processing</h1>
+    <p>Tufts University, Fall 2026</p>
+    <nav aria-label="Course navigation">
+      <a href="#schedule">Schedule</a>
+      <a href="#syllabus">Syllabus</a>
+      <a href="#problem-sets">Problem Sets</a>
+    </nav>
+    <!-- Main ourse information -->
+    <div class="details">
+      <p><strong>Professor: </strong><a href="https://dmitropolsky.github.io/">Daniel Mitropolsky</a></p>
+      <p><strong>Lecture:</strong> MW 3:00-4:15pm</p>
+      <p><strong>Location:</strong> Joyce Cummings Center 610</p>
+      <p><strong>CA:</strong> Noah Dengler</p>
+      <p><strong>Office hours:</strong> TBD</p>
+    </div>
+  </header>
+  <main>
+    <section id="schedule" aria-labelledby="schedule-title">
+      <h2 id="schedule-title">Schedule</h2>
+      <div class="table-wrap" role="region" aria-label="Course schedule" tabindex="0">
+      <table>
+        <caption>September 9 – December 14, 2026</caption>
+        <colgroup>
+          <col class="date-col"><col class="topic-col"><col class="ref-col"><col class="other-col">
+        </colgroup>
+        <thead>
+          <tr><th scope="col">Date</th><th scope="col">Topics</th><th scope="col">References</th><th scope="col">Assignments / other</th></tr>
+        </thead>
+        <tbody>
+          <!-- Edit the empty td cells below. Dates include every Monday and Wednesday;
+               mark holidays or canceled classes as needed. -->
+          <!-- 2026-09-09 -->
+          <tr>
+            <th scope="row"><time datetime="2026-09-09">Wed Sep 9</time></th>
+            <td>Introduction, Language Modeling, Markov Models and n-gram models</td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-09-14 -->
+          <tr>
+            <th scope="row"><time datetime="2026-09-14">Mon Sep 14</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-09-16 -->
+          <tr>
+            <th scope="row"><time datetime="2026-09-16">Wed Sep 16</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-09-21 -->
+          <tr>
+            <th scope="row"><time datetime="2026-09-21">Mon Sep 21</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-09-23 -->
+          <tr>
+            <th scope="row"><time datetime="2026-09-23">Wed Sep 23</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-09-28 -->
+          <tr>
+            <th scope="row"><time datetime="2026-09-28">Mon Sep 28</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-09-30 -->
+          <tr>
+            <th scope="row"><time datetime="2026-09-30">Wed Sep 30</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-10-05 -->
+          <tr>
+            <th scope="row"><time datetime="2026-10-05">Mon Oct 5</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-10-07 -->
+          <tr>
+            <th scope="row"><time datetime="2026-10-07">Wed Oct 7</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-10-12 -->
+          <tr>
+            <th scope="row"><time datetime="2026-10-12">Mon Oct 12</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-10-14 -->
+          <tr>
+            <th scope="row"><time datetime="2026-10-14">Wed Oct 14</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-10-19 -->
+          <tr>
+            <th scope="row"><time datetime="2026-10-19">Mon Oct 19</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-10-21 -->
+          <tr>
+            <th scope="row"><time datetime="2026-10-21">Wed Oct 21</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-10-26 -->
+          <tr>
+            <th scope="row"><time datetime="2026-10-26">Mon Oct 26</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-10-28 -->
+          <tr>
+            <th scope="row"><time datetime="2026-10-28">Wed Oct 28</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-11-02 -->
+          <tr>
+            <th scope="row"><time datetime="2026-11-02">Mon Nov 2</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-11-04 -->
+          <tr>
+            <th scope="row"><time datetime="2026-11-04">Wed Nov 4</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-11-09 -->
+          <tr>
+            <th scope="row"><time datetime="2026-11-09">Mon Nov 9</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-11-11 -->
+          <tr>
+            <th scope="row"><time datetime="2026-11-11">Wed Nov 11</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-11-16 -->
+          <tr>
+            <th scope="row"><time datetime="2026-11-16">Mon Nov 16</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-11-18 -->
+          <tr>
+            <th scope="row"><time datetime="2026-11-18">Wed Nov 18</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-11-23 -->
+          <tr>
+            <th scope="row"><time datetime="2026-11-23">Mon Nov 23</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-11-25 -->
+          <tr>
+            <th scope="row"><time datetime="2026-11-25">Wed Nov 25</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-11-30 -->
+          <tr>
+            <th scope="row"><time datetime="2026-11-30">Mon Nov 30</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-12-02 -->
+          <tr>
+            <th scope="row"><time datetime="2026-12-02">Wed Dec 2</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-12-07 -->
+          <tr>
+            <th scope="row"><time datetime="2026-12-07">Mon Dec 7</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-12-09 -->
+          <tr>
+            <th scope="row"><time datetime="2026-12-09">Wed Dec 9</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+          <!-- 2026-12-14 -->
+          <tr>
+            <th scope="row"><time datetime="2026-12-14">Mon Dec 14</time></th>
+            <td></td><!-- Topics -->
+            <td></td><!-- References -->
+            <td></td><!-- Assignments / other -->
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+    <section id="syllabus" aria-labelledby="syllabus-title">
+      <h2 id="syllabus-title">Syllabus</h2>
+       <h3 id="syllabus-title">Overview</h3>
+          <p>This course is a a graduate level introduction to natural language processing (NLP), the study of human language from a computational and statistical perspective. The course will provide a solid background in the mathematical and algorithmic foundations of NLP, programming experience in building NLP models. The course will enable students to read NLP papers.</p>
+          <p>The first half of the semester will mostly be on classical methods and models: language modeling, Markov and n-gram models, hidden Markov models, tagging, log-linear models, probibalistic context-free grammars and parsing. The second half of the semester will concern neural and modern methods: neural networks, computational graphs, attention and transformers, reinforcement learning methods.</p>
+        <h3 id="syllabus-title">Prerequisites</h3> 
+          <p>The most important prerequisites are mathematical maturity, and experience in programming in Python. Theoretical assignments and exams will include proofs, so if you have taken something like algorithms, discrete math, or a similar course, you should be well prepared. You will also be very well prepared if you have taken a general machine learning course.</p>
+          <p>However, there are no strict prerequisities. You can look at the notes under "References" on the previous course webpage linked under "Textbook" below to get a sense of the course content and mathematical level. If you still have doubts, please talk to the course instructor.</p>
+        <h3 id="syllabus-title">Textbook</h3>
+            <p>As a reference, we will be using Michael Collin's excellent NLP notes. You may look at a previous iteration of this course that I taught with Michael Collins to get a sense of the material and to read ahead if you wish -- the notes are under "References":
+            <a href="https://www.cs.columbia.edu/~mcollins/cs4705-spring2019/">Previous NLP Class (Columbia) with All NLP Notes</a>
+            </p>
+
+            <p>Later in the semester, we may use other reference materials.</p>
+
+        <h3 id="syllabus-title">Course structure</h3>
+          <p>The course will consist of lectures (attendance required), and:</p>
+            <ul>
+              <li>Two midterms exams (20% each)</li>
+              <li>Final exam (30%)</li>
+              <li>~ 4 problem sets (20%)</li>
+            </ul>
+          <p>Please note that this is subject to change, especially in the beginning of the semester.</p>
+
+        <h3 id="syllabus-title">AI Policy</h3>
+          <p></p>
+          <p>This section will be updated with the course's AI policy for problem sets.</p>
+    </section>
+    <section id="problem-sets" aria-labelledby="problem-sets-title">
+      <h2 id="problem-sets-title">Problem Sets</h2>
+      <!-- Add problem set links here. -->
+    </section>
+  </main>
+</div>
+</body>
+</html>
